@@ -117,21 +117,21 @@ repos:
     -   id: python-safety-dependencies-check
       #
     # Bandit https://github.com/PyCQA/bandit
--   repo: https://github.com/PyCQA/bandit
-    rev: 1.6.3
-    hooks:
-    -   id: bandit
+# -   repo: https://github.com/PyCQA/bandit
+#     rev: 1.6.3
+#     hooks:
+#     -   id: bandit
 # Below is opinionated linters and formatters. Uncomment at your own risk!
 #       # Interrogate https://interrogate.readthedocs.io/en/latest/
-#   -   repo: https://github.com/econchick/interrogate
-#       rev: 7a0823fb29ddcd955eaf3aa91e7e93c8ca6bfbfd
-#       hooks:
-#       -   id: interrogate
-#           args:
-#             - --fail-under=95
-#             - --verbose
-#             - --ignore-init-method
-#             - --ignore-init-module
+-   repo: https://github.com/econchick/interrogate
+    rev: 7a0823fb29ddcd955eaf3aa91e7e93c8ca6bfbfd
+    hooks:
+    -   id: interrogate
+        args:
+          - --fail-under=95
+          - --verbose
+          - --ignore-init-method
+          - --ignore-init-module
 #   # Dotenv Linter https://dotenv-linter.readthedocs.io/en/latest/index.html
 # - repo: https://github.com/wemake-services/dotenv-linter
 #   rev: 0.2.0  # Use the ref you want to point at

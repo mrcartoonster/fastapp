@@ -10,6 +10,7 @@ fastapi = {extras = ["all"], version = "^0.62.0"}
 mimesis = "^4.1.2"
 segno = "^1.3.1"
 emoji = "^0.6.0"
+gunicorn = "^20.0.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
@@ -21,6 +22,7 @@ locust = "^1.4.1"
 ipython = "^7.19.0"
 prettyprinter = "^0.18.0"
 pre-commit = "^2.9.3"
+pytest-pythonpath = "^0.7.3"
 
 [build-system]
 requires = ["poetry>=0.12"]
