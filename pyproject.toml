@@ -11,6 +11,7 @@ mimesis = "^4.1.2"
 segno = "^1.3.1"
 emoji = "^0.6.0"
 gunicorn = "^20.0.4"
+httpx = "^0.16.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
@@ -23,6 +24,10 @@ ipython = "^7.19.0"
 prettyprinter = "^0.18.0"
 pre-commit = "^2.9.3"
 pytest-pythonpath = "^0.7.3"
+
+[tool.pytest.ini_options]
+addopts = "-rssxX -l --tb=short --strict --randomly-seed=last --diff-type=split --emoji -vvv -p no:warnings"
+xfail_strict = "True"
 
 [build-system]
 requires = ["poetry>=0.12"]
