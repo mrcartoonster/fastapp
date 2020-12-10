@@ -7,15 +7,13 @@ from typing import List
 
 from fastapi import FastAPI, Query
 
+from description import desc
 from helpers import emojis, passwd, random_users
 from pydantic_models import Emoji, Password, Person
 
 app = FastAPI(
     title="Something Random...",
-    description=(
-        "Simple Digital Ocean [App Platform](https://do.co/2Kd8lkQ)"
-        " Deploy example"
-    ),
+    description=desc,
     version="0.0.1",
     redoc_url="/",
 )
