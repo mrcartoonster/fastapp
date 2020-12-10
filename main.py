@@ -20,7 +20,7 @@ app = FastAPI(
 
 
 @app.get("/person", response_model=List[Person], tags=["Randomness..."])
-async def randome_persons(
+async def random_persons(
     num: int = Query(
         5,
         title="Get a random list of people.",
@@ -39,7 +39,7 @@ async def randome_persons(
 
 
 @app.get("/password", response_model=Password, tags=["Randomness..."])
-async def randome_password(
+async def random_password(
     num: int = Query(
         8,
         title="Length of password.",
