@@ -48,12 +48,3 @@ class Emoji(BaseModel):
     """
 
     emoji: str
-
-    class Config:
-        """
-        Schema Extra Example showing an Emoji.
-        """
-
-        schema_extra = {
-            "emoji": "🏈",
-        }

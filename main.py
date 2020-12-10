@@ -10,14 +10,16 @@ from fastapi import FastAPI, Query
 from helpers import emojis, passwd, random_users
 from pydantic_models import Emoji, Password, Person
 
-app = FastAPI()
+app = FastAPI(
+    title="Something Random...",
+)
 
 
-@app.get("/person", response_model=List[Person])
+@app.get("/person", response_model=List[Person], tags=["Randomness..."])
 async def randome_users(
     num: int = Query(
         5,
-        title="Get randon set of people.",
+        title="Get a random list of people.",
         ge=1,
         le=50,
     )
@@ -32,7 +34,7 @@ async def randome_users(
     return persons
 
 
-@app.get("/password", response_model=Password)
+@app.get("/password", response_model=Password, tags=["Randomness..."])
 async def randome_password(
     num: int = Query(
         8,
@@ -51,7 +53,7 @@ async def randome_password(
     return {"password": password}
 
 
-@app.get("/emoji", response_model=Emoji)
+@app.get("/emoji", response_model=Emoji, tags=["Randomness..."])
 async def random_emoji():
     """
     Return a random emoji.
