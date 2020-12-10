@@ -16,6 +16,7 @@ email-validator = "^1.1.2"
 pytest-clarity = "^0.3.0-alpha.0"
 pytest-emoji = "^0.2.0"
 pytest-randomly = "^3.5.0"
+pytest-pythonpath = "^0.7.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
@@ -23,7 +24,6 @@ pytest-picked = "^0.4.4"
 ipython = "^7.19.0"
 prettyprinter = "^0.18.0"
 pre-commit = "^2.9.3"
-pytest-pythonpath = "^0.7.3"
 
 [tool.pytest.ini_options]
 addopts = "-rssxX -l --tb=short --strict --randomly-seed=last --diff-type=split --emoji -vvv -p no:warnings"
