@@ -3,14 +3,17 @@
 Main FastAPI app.
 """
 # -*- coding: utf-8 -*-
+from typing import List
+
 from fastapi import FastAPI, Query
 
 from helpers import emojis, passwd, random_users
+from pydantic_models import Emoji, Password, Person
 
 app = FastAPI()
 
 
-@app.get("/person")
+@app.get("/person", response_model=List[Person])
 async def randome_users(
     num: int = Query(
         5,
@@ -18,7 +21,7 @@ async def randome_users(
         ge=1,
         le=50,
     )
-):
+) -> List[Person]:
     """
     Get a random list of persons.
 
@@ -29,7 +32,7 @@ async def randome_users(
     return persons
 
 
-@app.get("/password")
+@app.get("/password", response_model=Password)
 async def randome_password(
     num: int = Query(
         8,
@@ -48,7 +51,7 @@ async def randome_password(
     return {"password": password}
 
 
-@app.get("/emoji")
+@app.get("/emoji", response_model=Emoji)
 async def random_emoji():
     """
     Return a random emoji.

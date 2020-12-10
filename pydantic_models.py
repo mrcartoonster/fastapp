@@ -2,10 +2,10 @@
 """
 Response models for each endpoint.
 """
-from pydantic import BaseModel
+from pydantic import UUID4, BaseModel, EmailStr
 
 
-class RandomUsers(BaseModel):
+class Password(BaseModel):
     """
     Type Check valid Python string returned.
     """
@@ -15,9 +15,45 @@ class RandomUsers(BaseModel):
     password: str
 
 
+class Address(BaseModel):
+    """
+    Nested submodule for Person's Pydantic model.
+    """
+
+    # Not checking for valid U.S. streets, cityies or zip codes. Ain't nobody
+    # got time for that! Trusting Mimesis on that.
+    street: str
+    city: str
+    zipcode: str
+
+
 class Person(BaseModel):
     """
     Type check valid Persons is returned.
     """
 
-    pass
+    id: UUID4
+    name: str
+    surname: str
+    email: EmailStr
+    age: int
+    username: str
+    occuptaion: str
+    address: Address
+
+
+class Emoji(BaseModel):
+    """
+    Type check Respone Model for emoji.
+    """
+
+    emoji: str
+
+    class Config:
+        """
+        Schema Extra Example showing an Emoji.
+        """
+
+        schema_extra = {
+            "emoji": "🏈",
+        }
