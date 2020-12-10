@@ -5,7 +5,7 @@ Random user endpoint.
 Using Mimesis example for this: https://bit.ly/37KUAlo
 
 """
-from emoji import emojize
+import emoji
 from mimesis import Generic
 from mimesis.enums import Gender
 from mimesis.schema import Field, Schema
@@ -38,8 +38,8 @@ def passwd(length: int = 8, hash: bool = False) -> str:
     return g.person.password(length=length, hashed=hash)
 
 
-def emojis():
+def emojis() -> str:
     """
-    Helper function to create random emojis.
+    Helper function to create random a emoji.
     """
-    return emojize(g.internet.emoji(), use_aliases=True)
+    return emoji.emojize(g.internet.emoji(), use_aliases=True)

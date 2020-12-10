@@ -13,9 +13,9 @@ def test_persons():
     """
     Ensure that a list of randome persons are returned.
     """
-    # WHEN FastApp GET request is given
+    # GIVEN FastApp GET request is given
 
-    # GIVEN GET request to persons
+    # WHEN GET request to persons
     resp = client.get("/person")
 
     # THEN a 200 is returned
@@ -27,9 +27,9 @@ def test_person_num():
     Ensure when number is passed to query, the correct number of persons
     is returned.
     """
-    # WHEN FastAPI GET request is given
+    # GIVEN FastAPI GET request is given
 
-    # GIVEN GET request to person endpoint with query of 28
+    # WHEN GET request to person endpoint with query of 28
     resp = client.get("/person", params={"num": 28})
 
     # THEN 28 persons are returned
@@ -43,9 +43,9 @@ def test_person_num_failing():
     Ensure when more than 50 persons are requested, 422 is returned and
     no persons are returned.
     """
-    # WHEN FastAPI GET request is given
+    # GIVEN FastAPI GET request is given
 
-    # GIVEN GET request to person endpoint with query of 51
+    # WHEN GET request to person endpoint with query of 51
     resp = client.get("/person", params={"num": 51})
 
     # THEN 422 is returned.
@@ -60,9 +60,9 @@ def test_password():
     the default.
 
     """
-    # WHEN FastAPI GET request is GIVEN
+    # GIVEN FastAPI GET request is GIVEN
 
-    # GIVEN GET request to password endpoint.
+    # WHEN GET request to password endpoint.
     resp = client.get("/password")
 
     # THEN 200 response is given
@@ -73,10 +73,23 @@ def test_password_failing():
     """
     Ensure if num given is greater than 64, 422 is returned.
     """
-    # WHEN FastAPI GET request is GIVEN
+    # GIVEN FastAPI GET request is GIVEN
 
-    # GIVEN GET request to password with endpoint with greater than 64.
-    resp = client.get("/passord", params={"num": 65})
+    # WHEN GET request to password with endpoint with greater than 64.
+    resp = client.get("/password", params={"num": 65})
 
     # THEN 422 response
     assert resp.status_code != 200
+
+
+def test_emoji():
+    """
+    Ensure that an emoji is returned.
+    """
+    # GIVEN FastAPI GET request to emoji endpoint
+
+    # WHEN GET request is sent
+    resp = client.get("/emoji")
+
+    # THEN response should be 200
+    assert resp.status_code == 200
