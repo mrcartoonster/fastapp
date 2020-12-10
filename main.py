@@ -15,7 +15,7 @@ app = FastAPI(
     title="Something Random...",
     description=desc,
     version="0.0.1",
-    redoc_url="/",
+    docs_url="/",
 )
 
 
