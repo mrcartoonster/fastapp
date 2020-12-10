@@ -12,6 +12,9 @@ from pydantic_models import Emoji, Password, Person
 
 app = FastAPI(
     title="Something Random...",
+    descripiong='Simple Digital App Platform Deploy example',
+    version="0.0.1",
+    redoc_url="/"
 )
 
 
