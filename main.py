@@ -22,7 +22,7 @@ app = FastAPI(
 
 
 @app.get("/person", response_model=List[Person], tags=["Randomness..."])
-async def randome_users(
+async def randome_persons(
     num: int = Query(
         5,
         title="Get a random list of people.",
