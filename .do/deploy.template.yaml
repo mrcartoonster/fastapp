@@ -1,0 +1,19 @@
+domains:
+- domain: mrcartoonsters.tk
+  type: PRIMARY
+  zone: mrcartoonsters.tk
+name: fastapp
+region: nyc
+services:
+- environment_slug: python
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: mrcartoonster/fastapp
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: fastapp
+  routes:
+  - path: /
+  run_command: gunicorn --worker-tmp-dir /dev/shm --config gunicorn.config.py main:app
