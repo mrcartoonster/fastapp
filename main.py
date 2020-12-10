@@ -12,7 +12,7 @@ from pydantic_models import Emoji, Password, Person
 
 app = FastAPI(
     title="Something Random...",
-    descripiong=(
+    description=(
         "Simple Digital Ocean [App Platform](https://do.co/2Kd8lkQ)"
         " Deploy example"
     ),
