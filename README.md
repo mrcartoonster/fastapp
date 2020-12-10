@@ -1,5 +1,5 @@
 # FastAPI and Digital Ocean's [App Platform](https://www.digitalocean.com/docs/app-platform/)
-[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{mrcartoonster}/{fastapp}/tree/{main})
+[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-white.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{mrcartoonster}/{fastapp}/tree/{main})
 
 # The Deploy 🚀
 This is a sample repo on how to deploy a FastAPI app to Digital Ocean's *One-Click* deploy PAAS known as App Platform. At this time they don't have an example for FastAPI. They have examples for the rest of Python Web Apps. The most important files here are the `Procfile` and `gunicorn.conf.py` file. This app will run as is and is hosted on the app platform so you can check it out by clicking on that shiny Deploy to DigitalOcean button. If you don't have a DigitalOcean account, use my [link](https://m.do.co/c/beef14f5483f) to get a $100 credit for the first 60 days. You have no excuse to deploy FastAPI now!
