@@ -50,3 +50,33 @@ def test_person_num_failing():
 
     # THEN 422 is returned.
     assert resp.status_code == 422
+
+
+def test_password():
+    """
+    Ensure that when GET request is sent to password.
+
+    A password is returned with the length of 8, witch is the length of
+    the default.
+
+    """
+    # WHEN FastAPI GET request is GIVEN
+
+    # GIVEN GET request to password endpoint.
+    resp = client.get("/password")
+
+    # THEN 200 response is given
+    assert resp.status_code == 200
+
+
+def test_password_failing():
+    """
+    Ensure if num given is greater than 64, 422 is returned.
+    """
+    # WHEN FastAPI GET request is GIVEN
+
+    # GIVEN GET request to password with endpoint with greater than 64.
+    resp = client.get("/passord", params={"num": 65})
+
+    # THEN 422 response
+    assert resp.status_code != 200

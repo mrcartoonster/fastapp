@@ -2,10 +2,11 @@
 """
 Random user endpoint.
 
-Using Mimesis example for this: https://mimesis.name/tips.html#dummy-
-api-endpoints
+Using Mimesis example for this: https://bit.ly/37KUAlo
 
 """
+from emoji import emojize
+from mimesis import Generic
 from mimesis.enums import Gender
 from mimesis.schema import Field, Schema
 
@@ -26,3 +27,19 @@ random_users = Schema(
         },
     },
 )
+
+g = Generic("en")  # Going to stick with American English.
+
+
+def passwd(length: int = 8, hash: bool = False) -> str:
+    """
+    Helper function to generate a random password.
+    """
+    return g.person.password(length=length, hashed=hash)
+
+
+def emojis():
+    """
+    Helper function to create random emojis.
+    """
+    return emojize(g.internet.emoji(), use_aliases=True)
