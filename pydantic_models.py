@@ -38,7 +38,7 @@ class Person(BaseModel):
     email: EmailStr
     age: int
     username: str
-    occuptaion: str
+    occupation: str
     address: Address
 
 
