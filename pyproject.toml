@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastapp"
-version = "0.1.0"
+version = "0.0.1"
 description = ""
 authors = ["Evan Baird <mrcartoonster@gmail.com>"]
 
@@ -8,15 +8,9 @@ authors = ["Evan Baird <mrcartoonster@gmail.com>"]
 python = "^3.8"
 fastapi = {extras = ["all"], version = "^0.62.0"}
 mimesis = "^4.1.2"
-segno = "^1.3.1"
 emoji = "^0.6.0"
 gunicorn = "^20.0.4"
-httpx = "^0.16.1"
 email-validator = "^1.1.2"
-pytest-clarity = "^0.3.0-alpha.0"
-pytest-emoji = "^0.2.0"
-pytest-randomly = "^3.5.0"
-pytest-pythonpath = "^0.7.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
@@ -25,6 +19,11 @@ ipython = "^7.19.0"
 prettyprinter = "^0.18.0"
 pre-commit = "^2.9.3"
 pendulum = "^2.1.2"
+pytest-clarity = "^0.3.0-alpha.0"
+pytest-emoji = "^0.2.0"
+pytest-randomly = "^3.5.0"
+pytest-pythonpath = "^0.7.3"
+httpx = "^0.16.1"
 
 [tool.pytest.ini_options]
 addopts = "-rssxX -l --tb=short --strict --randomly-seed=last --diff-type=split --emoji -vvv -p no:warnings"
