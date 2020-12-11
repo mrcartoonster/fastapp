@@ -20,7 +20,7 @@ class Address(BaseModel):
     Nested submodule for Person's Pydantic model.
     """
 
-    # Not checking for valid U.S. streets, cityies or zip codes. Ain't nobody
+    # Not checking for valid U.S. streets, cities or zip codes. Ain't nobody
     # got time for that! Trusting Mimesis on that.
     street: str
     city: str
