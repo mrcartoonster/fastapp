@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Response models for each endpoint.
+Pydantic Response models for each endpoint.
 """
 from pydantic import UUID4, BaseModel, EmailStr
 
