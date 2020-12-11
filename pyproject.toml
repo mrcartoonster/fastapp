@@ -24,6 +24,7 @@ pytest-picked = "^0.4.4"
 ipython = "^7.19.0"
 prettyprinter = "^0.18.0"
 pre-commit = "^2.9.3"
+pendulum = "^2.1.2"
 
 [tool.pytest.ini_options]
 addopts = "-rssxX -l --tb=short --strict --randomly-seed=last --diff-type=split --emoji -vvv -p no:warnings"
