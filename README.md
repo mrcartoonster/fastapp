@@ -1,3 +1,4 @@
+![random](img/noun_random_3577407.svg)
 # FastAPI and Digital Ocean's [App Platform](https://www.digitalocean.com/docs/app-platform/)
 [![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{mrcartoonster}/{fastapp}/tree/{main})
 
