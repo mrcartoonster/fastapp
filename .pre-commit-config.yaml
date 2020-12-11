@@ -117,13 +117,7 @@ repos:
     hooks:
     -   id: python-safety-dependencies-check
       #
-    # Bandit https://github.com/PyCQA/bandit
-# -   repo: https://github.com/PyCQA/bandit
-#     rev: 1.6.3
-#     hooks:
-#     -   id: bandit
-# Below is opinionated linters and formatters. Uncomment at your own risk!
-#       # Interrogate https://interrogate.readthedocs.io/en/latest/
+    # Interrogate https://interrogate.readthedocs.io/en/latest/
 -   repo: https://github.com/econchick/interrogate
     rev: 7a0823fb29ddcd955eaf3aa91e7e93c8ca6bfbfd
     hooks:
@@ -133,36 +127,3 @@ repos:
           - --verbose
           - --ignore-init-method
           - --ignore-init-module
-#   # Dotenv Linter https://dotenv-linter.readthedocs.io/en/latest/index.html
-# - repo: https://github.com/wemake-services/dotenv-linter
-#   rev: 0.2.0  # Use the ref you want to point at
-#   hooks:
-# -   id: dotenv-linter
-#
-#     # MyPy https://github.com/pre-commit/mirrors-mypy
-# -   repo: https://github.com/pre-commit/mirrors-mypy
-#     rev: f687d36b12cd72d417bba07599ff27e734161768
-#     hooks:
-#     -   id: mypy
-#         args: [--no-strict-optional, --ignore-missing-imports]
-#
-#     # Re-Order Imports https://github.com/asottile/reorder_python_imports
-# -   repo: https://github.com/asottile/reorder_python_imports
-#     rev: 925baf70b8fe1467ac1712ddd6793d52978a4a72
-#     hooks:
-#     -   id: reorder-python-imports
-#
-#
-#     # Swagger-CLI validator https://apitools.dev/swagger-cli/
-# -   repo: https://github.com/APIDevTools/swagger-cli
-#     rev: 9fec0bce6954a1bf7d396a6356f9c93780a92da7
-#     hooks:
-#     -   id: swagger-validation
-#         args: ["validate", "<path to root swagger>"]
-#
-#   # Git Tickect https://giticket.readthedocs.io/en/latest/
-# -  repo:  https://github.com/milin/giticket  # View docs to see how to set up custom ticket.
-#    rev: <grab the latest commit hash>
-#    hooks:
-#    -   id:  giticket
-#        args: ['--regex=PROJ-[0-9]', '--format={ticket} {commit_msg}']  # Optional
