@@ -95,7 +95,7 @@ repos:
           - --doctests
 
     # Unimport https://unimport.hakancelik.dev/#/
--   repo: https://github.com/hakancelik96/unimport
+-   repo: https://github.com/hakancelikdev/unimport
     rev: 0.6.8
     hooks:
     -   id: unimport
