@@ -26,7 +26,7 @@ async def random_persons(
         title="Get a random list of people.",
         ge=1,
         le=50,
-    )
+    ),
 ) -> List[Person]:
     """
     Get a random list of persons.
